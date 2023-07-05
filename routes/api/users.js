@@ -7,8 +7,6 @@ const jwt = require('jsonwebtoken');
 const keys = require('../../config/keys');
 const passport = require('passport');
 
-
-
 const validateRegisterInput = require('../../validation/register');
 const validateLoginInput = require('../../validation/login');
 
@@ -23,7 +21,7 @@ router.post('/register', (req, res) => {
     }
     const email=req.body.email ;
     const password=req.body.password ;
-    console.log(req.body);
+    // console.log(req.body);
     User.findOne({
         email:email
     })
@@ -120,5 +118,5 @@ router.get(
         });
 });
 
-
+// 01770160750
 module.exports = router;
