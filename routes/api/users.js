@@ -15,7 +15,7 @@ router.get('/test' ,(req,res) => res.json({msg:"acho naki valo"}));
 router.post('/register', (req, res) => {
     // console.log(req.body);
     const { errors,isValid } = validateRegisterInput(req.body);
-    console.log(isValid)
+    // console.log(isValid)
     if(!isValid) {
        return res.status(400).json( errors);
     }
@@ -118,5 +118,4 @@ router.get(
         });
 });
 
-// 01770160750
 module.exports = router;
