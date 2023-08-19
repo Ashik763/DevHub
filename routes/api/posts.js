@@ -167,7 +167,7 @@ router.delete('/comment/:id/:comment_id',passport.authenticate('jwt',{session:fa
                                 .indexOf(req.params.comment_id);
 
          post.comments.splice(removeIndex, 1);
-         post.save().then(post => res.json(post));               
+         post.save().then(post => res.json(post));                 
 
        
 
