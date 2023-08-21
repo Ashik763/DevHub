@@ -19,9 +19,9 @@ router.post('/register', (req, res) => {
     if(!isValid) {
        return res.status(400).json( errors);
     }
-    const email=req.body.email ;
-    const password=req.body.password ;
-    // console.log(req.body);
+    const email = req.body.email ;
+    const password = req.body.password ;
+    
     User.findOne({
         email:email
     })
