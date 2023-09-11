@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 class Dashboard extends Component {
     componentDidMount(){
         this.props.getCurrentProfile();
-    }
+    } 
     render() {
         const {user} = this.props.auth;
         const {profile,loading} = this.props.profile;
