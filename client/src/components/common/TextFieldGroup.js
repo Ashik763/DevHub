@@ -13,6 +13,8 @@ const TextFieldGroup = ({
   onChange,
   disabled,
 }) => {
+
+  console.log(error===false);
   return (
     <div className="form-group">
       <input
