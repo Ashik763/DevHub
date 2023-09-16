@@ -11,10 +11,6 @@ class Profiles extends Component {
     console.log("dfad")
   }
 
-  // componentWillReceiveProps(nextProps) {
-  // if(nextProps)  this.setState({nextProps});
-  // }
-
   render() {
     const { profiles, loading } = this.props.profile;
     let profileItems;
@@ -51,7 +47,8 @@ class Profiles extends Component {
 
 Profiles.propTypes = {
   getProfiles: PropTypes.func.isRequired,
-  profile: PropTypes.object.isRequired
+  profile: PropTypes.object.isRequired,
+  
 };
 
 const mapStateToProps = state => ({
