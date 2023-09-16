@@ -6,6 +6,9 @@ import { deleteAccount, getCurrentProfile } from '../../actions/profileActions';
 import Spinner from '../common/Spinner';
 import { Link } from 'react-router-dom';
 import ProfileActions from './ProfileActions';
+import Experience from './Experience';
+import Education from './Education';
+// import Experience from '../../../../validation/experience';
 
 
 class Dashboard extends Component {
@@ -32,9 +35,11 @@ class Dashboard extends Component {
                     <div> 
                         <p className='lead text-muted'> Welcome <Link to={`/profile/${profile.handle}`}>{user.name} </Link> </p>
                         <ProfileActions/>
+                        <Experience  experience={profile.experience}  />
+                        <Education education={profile.education} />
                         
                         <div style = {{marginBottom:'60px'}}>
-                            <button className='btn-danger' onClick={this.onDeleteClick.bind(this)}>Delete account
+                            <button className=' btn btn-danger' onClick={this.onDeleteClick.bind(this)}>Delete account
                            
                             </button>
                         </div>
@@ -55,7 +60,7 @@ class Dashboard extends Component {
             }
             // dashboardContent = <h1>Hello</h1>;
         }
-        console.log(dashboardContent);
+        // console.log(dashboardContent);
         return (
             <div className='dashboard'>
                 <div  className="container"> 

@@ -61,7 +61,7 @@ class AddExperience extends Component {
 
   render() {
     const { errors } = this.state;
-    console.log(errors.company);
+    // console.log(errors.company);
 
     return (
       <div className="add-experience">
