@@ -51,7 +51,7 @@ class PostForm extends Component {
           <div className="card-body">
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
-                <TextAreaFieldGroup
+                <TextAreaFieldGroup 
                   placeholder="Create a post"
                   name="text"
                   value={this.state.text}

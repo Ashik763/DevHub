@@ -12,15 +12,16 @@ class Posts extends Component {
   }
 
   render() {
-    const { posts, loading } = this.props.post;
+    
+    const { posts, loading } =this.props.post
     let postContent;
 
-    if (posts === null || loading) {
+    if (posts === null || loading ) {
       postContent = <Spinner />;
     } else {
       postContent = <PostFeed posts={posts} />;
     }
-
+    console.log(postContent);
     return (
       <div className="feed">
         <div className="container">
@@ -42,6 +43,7 @@ Posts.propTypes = {
 };
 
 const mapStateToProps = state => ({
+  // console.log(state);
   post: state.post
 });
 
