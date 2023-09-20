@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-const db = require('./config/keys').mongoURI;
+const db = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.he6kc5b.mongodb.net/`
 
 
 mongoose
