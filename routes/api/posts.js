@@ -31,7 +31,8 @@ router.get('/',(req,res) => {
 router.get('/:id',(req,res) => {
     Post.find({_id:req.params.id})
     .then(post=>{
-        res.json(post);
+        console.log(post);
+        res.json(post[post.length - 1]);
     })
     .catch(err => res.status(404).json({NotFound: "No post found"}))
 })

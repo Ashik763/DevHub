@@ -35,7 +35,7 @@ export const getPosts = () => dispatch => {
   axios
     .get('/api/posts')
     .then(res =>{
-      console.log(res.data)
+      // console.log(res.data)
       dispatch({
         type: GET_POSTS,
         payload: res.data
@@ -54,11 +54,12 @@ export const getPost = id => dispatch => {
   dispatch(setPostLoading());
   axios
     .get(`/api/posts/${id}`)
-    .then(res =>
+    .then(res =>{
+      console.log(res.data);
       dispatch({
         type: GET_POST,
         payload: res.data
-      })
+      })}
     )
     .catch(err =>
       dispatch({
@@ -90,7 +91,11 @@ export const deletePost = id => dispatch => {
 export const addLike = id => dispatch => {
   axios
     .post(`/api/posts/like/${id}`)
-    .then(res => dispatch(getPosts()))
+    .then(res =>{ 
+      
+      
+      dispatch(getPosts())
+    })
     .catch(err =>
       dispatch({
         type: GET_ERRORS,

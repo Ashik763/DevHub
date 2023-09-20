@@ -8,6 +8,7 @@ const initialState = {
 
 
 export default function profileReducer(state = initialState,action){
+    console.log("from profileReducer");
     switch(action.type){
         case PROFILE_LOADING:
             return {

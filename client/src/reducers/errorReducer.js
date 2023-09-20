@@ -4,7 +4,7 @@ const initialState = {
 };
 
 export default function errorReducer(state=initialState,action){
-    // console.log(action.type);
+    console.log("from errorReducer");
     switch(action.type){
         case GET_ERRORS:
             return action.payload;

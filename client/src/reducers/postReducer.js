@@ -13,6 +13,7 @@ import {
   };
   
   export default function postReducer(state = initialState, action) {
+   
     switch (action.type) {
       case POST_LOADING:
         return {
