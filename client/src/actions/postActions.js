@@ -55,7 +55,7 @@ export const getPost = id => dispatch => {
   axios
     .get(`/api/posts/${id}`)
     .then(res =>{
-      console.log(res.data);
+      // console.log(res.data);
       dispatch({
         type: GET_POST,
         payload: res.data

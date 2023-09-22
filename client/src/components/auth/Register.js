@@ -39,7 +39,7 @@ class Register extends Component {
             password2:this.state.password2,
 
         };
-        console.log(this.props);
+        // console.log(this.props);
         this.props.registerUser(newUser,this.props.history);
        
     }

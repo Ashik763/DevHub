@@ -5,15 +5,14 @@ import axios from "axios";
 
 export const  registerUser =  (userData,history) => dispatch => {
     axios.post('api/users/register', userData)
-    .then(res => ('/login'))
+    .then(res => history.push('/login'))
     .catch(err => {
         // console.log(err.response.data)
         dispatch({
             type: GET_ERRORS,
             payload: err.response.data
-        })}
-
-        );
+        })
+    });
  
 }
 
@@ -28,12 +27,13 @@ export const loginUser = (userData) => dispatch => {
         // set token to local storage
         localStorage.setItem('jwtToken', token);
         //set token to Auth header;
+
         setAuthToken(token);
         //Decode token to get user data
 
         const decoded = jwt_decode(token);
 
-        dispatch(setCurrentUser(decoded));
+        dispatch( setCurrentUser(decoded) );
 
 
     })
