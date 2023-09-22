@@ -1,5 +1,5 @@
-// console.log(process.env.SECRET_OR_KEY);
-module.exports ={
-    mongoURI :`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.he6kc5b.mongodb.net/`,
-    secretOrKey: `${process.env.SECRET_OR_KEY}`
-};
+if (process.env.NODE_ENV === 'production') {
+  module.exports = require('./keys_prod');
+} else {
+  module.exports = require('./keys_dev');
+}

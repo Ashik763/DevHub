@@ -76,7 +76,7 @@ router.post('/login',(req,res) => {
         bcrypt.compare(password,user.password)
         .then(isMatch =>{
             if(isMatch){
-                // User Matched
+                
                 const payload = {
                     id:user.id,
                      name:user.name,
@@ -95,7 +95,7 @@ router.post('/login',(req,res) => {
 
                 }); 
 
-                 // res.json({msg:"Success"})
+                //  res.json({msg:"Success"})
             }
             else{
                 errors.password = "Password incorrect";
