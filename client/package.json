@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
-    "firebase": "^10.4.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -44,6 +43,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://dev-hub-backend.vercel.app"
- 
+  "proxy": "https://dev-hub-backend-48wep4aoo-ashik763.vercel.app/"
 }
