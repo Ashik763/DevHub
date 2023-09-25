@@ -16,6 +16,7 @@ app.use(bodyParser.json());
 
 
 const db = require('./config/keys').mongoURI;
+// const db = 'mongodb://ashik:ashik@cluster0.he6kc5b.mongodb.net/';
 
 
 mongoose
