@@ -9,6 +9,11 @@ const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
 const app = express();
+app.use(cors({
+  origin:["https://client-6ed60a0fk-ashik763.vercel.app/"],
+  methods: [ 'POST','GET'],
+  credentials:true
+}));
 
 
 app.use(bodyParser.urlencoded({ extended: false }));
